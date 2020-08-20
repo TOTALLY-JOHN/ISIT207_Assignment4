@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Assignment4.3</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="student_container">
+        <h1>STUDENT DATA</h1><br />
+        <div id="result"></div>
+    </div>
+<script>
+    $(document).ready(function () {
+        $.get("students.xml", function (data) {
+            var html = "<table border='1'>";
+            html += "<tr>";
+            html += "<th>STUDENT ID</th>";
+            html += "<th>GENDER</th>";
+            html += "<th>FIRST NAME</th>";
+            html += "<th>LAST NAME</th>";
+            html += "<th>EMAIL ADDRESS</th>";
+            html += "<th>DAY OF BIRTH</th>";
+            html += "<th>NATIONALITY</th>";
+            html += "<th>PROFILE PICTURE</th>";
+            html += "</tr>";
+
+            $(data).find("student").each(function () {
+                var $student = $(this);
+                var id = $student.attr("id");
+                var gender = $student.attr("gender");
+                var fname = $student.find("first_name").text();
+                var lname = $student.find("last_name").text();
+                var email = $student.find("email").text();
+                var dob = $student.find("birthdate").text();
+                var nationality = $student.find("nationality").text();
+                var picture = $student.find("profile_pic").text();
+                html += "<tr>";
+                html += "<td>" + id + "</td>";
+                html += "<td>" + gender + "</td>";
+                html += "<td>" + fname + "</td>";
+                html += "<td>" + lname + "</td>";
+                html += "<td>" + email + "</td>";
+                html += "<td>" + dob + "</td>";
+                html += "<td>" + nationality + "</td>";
+                html += "<td><img src='" + picture + "' width='80' height='80' alt='profilePic'/></td>";
+                html += "</tr>";
+            });
+            html += "</table>";
+            $("#result").append($(html));
+        });
+    });
+</script>
+</body>
+</html>

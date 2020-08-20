@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Assignment4.1</title>
+    <style>
+        #main {
+            width: auto;
+            height: auto;
+            background-color: white;
+            margin: 0px auto 0px auto;
+        }
+
+        header {
+            height: 400px;
+            background-repeat: no-repeat;
+            background-size: 100%;
+        }
+
+        section {
+            /*The element is positioned relative to its normal position, 
+            so "left:30px" adds 30 pixels to the element's LEFT position */
+            position: relative;
+            margin-top: 350px;
+            margin-left: 230px;
+        }
+
+        aside {
+            /*The element of 'fixed' is positioned relative to the browser window.*/
+            position: fixed;
+            right: 12px;
+            top: 132px;
+
+            /*z-index property means an element's stack order.*/
+            z-index: 1;
+        }
+
+        #headerPart {
+            height:80px;
+            background-color:white;
+        }
+
+        #menu {
+            padding-top:10px;
+
+            /*Static is default value. Elements render in order, as they appear in the document flow*/
+            position:static;
+            margin-top:-400px;
+            margin-left:1003px;
+            width:500px;
+            height:70px;
+            background-color:white;
+        }
+
+        /*Remove underline of hyperlink*/
+        a {
+            text-decoration: none;
+        }
+
+        #menuText {
+            font-size:22px;
+            font-family: Arial;
+        }
+
+        #menuText:link {
+            color: black;
+        }
+
+        /* Visited : Selects all visited links (Pseudo Selector 2) */
+        #menuText:visited {
+            color: black;
+        }
+
+        /* Selects links on mouse over (Pseudo Selector 3) */
+        #menuText:hover {
+            color: indianred;
+        }
+
+        /* Selects the active link (Pseudo Selector 4) */
+        #menuText:active {
+            color: azure;
+        }
+
+        /* Link : Selects all unvisited links */
+        #footerLink:link {
+            color: #eeeeee;
+        }
+
+        /* Visited : Selects all visited links */
+        #footerLink:visited {
+            color: #eeeeee;
+        }
+
+        /* Selects links on mouse over */
+        #footerLink:hover {
+            color: dimgrey;
+        }
+
+        /* Selects the active link */
+        #footerLink:active {
+            color: white;
+        }
+
+        /* pseudo selector 5*/
+        input:focus {
+            background-color:#ececec;
+        }
+
+        tr:nth-child(odd) {
+            background-color: #d2d2d2;
+        }
+
+        tr:hover {
+            background-color: #f8f6a0;
+        }
+        header {
+            background-image: url(images/headerimage.jpg);
+        }
+
+        #section_img1 {
+            width: 300px;
+            height: 600px;
+            float: left;
+        }
+
+        #section_img2 {
+            margin-left: 75px;
+            width: 300px;
+            height: 600px;
+            float: left;
+        }
+
+        #section_img3 {
+            margin-left: 75px;
+            width: 500px;
+            height: 600px;
+            float: left;
+        }
+
+        article {
+            /*The element is positioned relative to its normal position,
+                so "left:30px" adds 30 pixels to the element's LEFT position */
+            position: relative;
+            width: auto;
+            height: 400px;
+            margin-top: 650px;
+            background-color: #dadada;
+        }
+
+        footer {
+            top: -20px;
+            position: relative;
+            width: auto;
+            height: 70px;
+            background-color: #353333;
+        }
+
+        button {
+            width:110px;
+            height:30px;
+            font-size:11px;
+            font-weight:bold;
+        }
+
+        .gold {
+            color: darkgoldenrod;
+            font-weight: bold;
+        }
+
+        .blue {
+            color: darkblue;
+            font-weight: bold;
+        }
+
+        .silver {
+            color: #575757;
+            font-weight: bold;
+        }
+    </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $("#button1").click(function () {
+            $("#section_img1").show(1000);
+        });
+        $("#button2").click(function () {
+            $("#section_img1").hide(1000);
+        });
+        $("#button3").click(function () {
+            $("#section_img1").toggle(1000);
+        });
+        $("#button4").click(function () {
+            $("#section_img2").slideDown();
+        });
+        $("#button5").click(function () {
+            $("#section_img2").slideUp();
+        });
+        $("#button6").click(function () {
+            $("#section_img2").slideToggle();
+        });
+        $("#button7").click(function () {
+            $("#section_img3").fadeIn(1000);
+        });
+        $("#button8").click(function () {
+            $("#section_img3").fadeOut(1000);
+        });
+        $("#button9").click(function () {
+            $("#section_img3").fadeToggle(1000);
+        });
+        $("#button10").click(function () {
+            $("#section_img1").addClass("gold");
+            $("#section_img2").addClass("blue");
+            $("#section_img3").addClass("silver");
+        });
+        $("#button11").click(function () {
+            $("#section_img1").removeClass("gold");
+            $("#section_img2").removeClass("blue");
+            $("#section_img3").removeClass("silver");
+        });
+        $("#button12").click(function () {
+            $("#section_img1").toggleClass("gold");
+            $("#section_img2").toggleClass("blue");
+            $("#section_img3").toggleClass("silver");
+        });
+    });
+</script>
+</head>
+<body>
+    <div id="main">
+        <header>
+            <div id="headerPart">
+                <a href="https://newinti.edu.my/" target="_self">
+                    <img src="images/pic3.png" width="300" height="80" alt="intiLogo" />
+                </a>
+            </div>
+            <div id="headImage">
+                <h1 style="font-family:'Century Schoolbook'; font-weight:bold; font-size:40px; color:white; margin-left:230px; margin-top:60px;">
+                    CHALLENGE.<br />STRUGGLE.<br />ACHIEVE.
+                </h1>
+            </div>
+        </header>
+        <nav>
+            <div id="menu">
+                <br />
+            </div>
+        </nav>
+        <section>
+            <br />
+            <h1 style="font-size:30px; font-family:'Lucida Sans';">TABLE TENNIS CLUB NEWS</h1>
+            <button id="button1" style="background-color:#ffb1b1">SHOW</button>&nbsp;
+            <button id="button2" style="background-color:#ffb1b1">HIDE</button>&nbsp;
+            <button id="button3" style="background-color:#ffb1b1">SHOW&amp;HIDE</button>&nbsp;&nbsp;
+            <button id="button4" style="background-color:#ddffa9">SHOW</button>&nbsp;
+            <button id="button5" style="background-color:#ddffa9">HIDE</button>&nbsp;
+            <button id="button6" style="background-color:#ddffa9">SHOW&amp;HIDE</button>&nbsp;&nbsp;
+            <button id="button7" style="background-color:#f6ffa7">SHOW</button>&nbsp;
+            <button id="button8" style="background-color:#f6ffa7">HIDE</button>&nbsp;
+            <button id="button9" style="background-color:#f6ffa7">SHOW&amp;HIDE</button>&nbsp;<br /><br />
+            <button id="button10" style="margin-left:358px; background-color:#8cbaff">SHOW EFFECTS</button>&nbsp;
+            <button id="button11" style="background-color:#8cbaff">HIDE EFFECTS</button>&nbsp;
+            <button id="button12" style="background-color:#8cbaff">SHOW&amp;HIDE</button><br /><br />
+            <div id="section_img1">
+                <img src="images/picture1.jpg" width="300" height="200" alt="pic1" /><br />
+                <h2 style="font-size:27px; font-family:'Californian FB';">Inti Subang College holds &quot;Charity Tournament&quot;.</h2>
+                <p style="font-size:17px; font-family: Calibri;">
+                    This club in Inti College Subang is to hold the tournament of the table tennis. If possible, some people
+                    from other universities are able to take part in this tournamnet with RM5 and possess the racket.
+                    For the winner of the tournament, the whole amount of money would be donated with the name of the winner.
+                    Besides, one certificate of winner would be offered. In the case that you would like to inquire, please
+                    send your email to the club of Inti Table Tennis. As soon as possible, we can make a reply quickly.
+                </p>
+            </div>
+            <div id="section_img2">
+                <img src="images/picture2.jpg" width="300" height="200" alt="pic2" />
+                <h2 style="font-size:27px; font-family:'Californian FB';">N.W.T. and Yukon train for table tennis</h2>
+                <p style="font-size:17px; font-family: Calibri;">
+                    The session of table tennis club would be held in Ecole Whitehorse Elementary School.
+                    Yukon Canada Winder Game team welcomed the team so as to represent the Northwest Regions.
+                    At this game, the coach of Yukon has revealed this. Therefore, the professionals as well as coaches
+                    from Yukon and the territories in the Northwest side took a picture as getting their training.
+                    Of course, this training was totally difficult. However, it was totally satisfactory to everybody.
+                </p>
+            </div>
+            <div id="section_img3">
+                <img src="images/picture3.jpg" width="300" height="200" alt="pic3" />
+                <h2 style="font-size:27px; font-family:'Californian FB'; width:300px;">Table Tennis Networker Award</h2>
+                <p style="font-size:17px; font-family: Calibri; width:300px;">
+                    Youngsters in the age of between 15 and 18 are able to gain TT Networker Table Tennis England Award of leadership.
+                    Of course, some aims exist for some purposes. First and foremost, we would like to encourage TT Networkers
+                    to allow the organization to be more enjoyable and meaningful Table Tennis Clubs concentrating on primarily young people.
+                    Besides, we want to motivate people to be more active for coaching and forming festivals.
+                </p>
+            </div>
+        </section>
+
+        <article>
+            <br /><br /><br />
+            <h3 style="font-size:30px; margin-left:230px;  font-family:'Arial Rounded MT';">
+                INTI TABLE TENNIS CLUB ACTIVITY
+            </h3>
+            <p style="font-size:20px; margin-left:230px; font-family:Arial; width:600px;">
+                Inti Subang College really welcomes all students to participate in the table tennis club.
+                You do not have to be worried about your awkward skills of table tennis because there can be
+                several lessons from Inti Subang Campus which has some lecturers. You are able to get a lecture
+                from these professionals. In addition, we certainly believe that you can become a person with better characteristics
+                in the campus life in Inti Subang College.
+            </p>
+            <img src="images/picture4.jpg" width="330" height="330" alt="intiLogo" style="position:relative; margin-left:950px; margin-top:-320px;" />
+        </article>
+        <aside>
+            <a href="https://www.instagram.com/inti_edu/?hl=en" target="_blank">
+                <img src="images/picture5.jpg" width="45" height="45" alt="instagram" /><br />
+            </a>
+            <a href="https://www.facebook.com/INTI.edu/" target="_blank">
+                <img src="images/picture6.jpg" width="45" height="45" alt="facebook" /><br />
+            </a>
+            <a href="http://international.newinti.edu.my/thank-you-for-contacting-us" target="_blank">
+                <img src="images/picture7.jpg" width="45" height="45" alt="whatsapp" /><br />
+            </a>
+            <a href="https://www.youtube.com/channel/UCvK0364R3x6ojR6_ozh5LkA" target="_blank">
+                <img src="images/picture8.jpg" width="45" height="45" alt="youtube" />
+            </a>
+        </aside>
+        <footer>
+            <p style="text-align:center; position:relative; top:10px; color:white; font-size:20px;">
+                &copy; Copyright 2019 INTI international University &amp; Colleges<br />
+                <a id="footerLink" href="https://newinti.edu.my/legal/tnc/" target="_blank">
+                    Terms of Use
+                </a>
+                &nbsp; &nbsp;
+                <a id="footerLink" href="https://newinti.edu.my/legal/privacy/" target="_blank">
+                    Private Policy
+                </a> &nbsp;
+
+            </p>
+        </footer>
+        <!--The element of 'fixed' is positioned relative to the browser window.-->
+        <a href="#headerPart" style="position:fixed; right:12px; bottom:6px;">
+            <img src="images/picture9.png" width="60" height="60" alt="goToTitle" />
+        </a>
+    </div>
+</body>
+</html>

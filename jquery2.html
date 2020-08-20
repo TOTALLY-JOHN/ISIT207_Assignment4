@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Assignment4.2</title>
+    <style>
+        body {
+            background-image: url(https://images.unsplash.com/photo-1565572473525-02d61e3d37dc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1936&q=80);
+            background-size:70%;
+        }
+        #jqueryAssg4_container {
+            width:1024px;
+            height:768px;
+            margin:0px auto 0px auto;
+            background-color:white;
+            border:2px solid black;
+        }
+        #jqueryAssg4_header {
+            height:100px;
+            text-align:center;
+            font-size:30px;
+            border-bottom:2px solid black;
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        #jqueryAssg4_body {
+            width:1023.2px;
+            height:625px;
+            float:left;
+        }
+        #tables {
+            margin-left:10px;
+        }
+    </style>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+</head>
+
+
+<body>
+    <div id="jqueryAssg4_container">
+        <div id="jqueryAssg4_header">
+            <h1 id="jqueryAssg4_header_heading">Inti College Subang</h1>
+        </div>
+        <div id="jqueryAssg4_body" style="background-color:#efefef">
+            <p id="subject">
+                Inti College Subang provides a lot of programmes:<br />
+                <span id="subjectList">
+                    <i>INFORMATION TECHNOLOGY</i>,&nbsp;
+                    <i>COMPUTER SCIENCE</i>,&nbsp;
+                    <i>HOTEL MANAGEMENT</i>,&nbsp;
+                    <i>CHEMISTRY</i>,&nbsp;
+                    <i>PHYSICS</i>,&nbsp;
+                    <i>GRAPHIC DESIGN</i>,&nbsp;
+                    <i>LOGISTICS</i>.
+                </span>
+            </p>
+            <p id="club">
+                Besides, there are a lot of clubs in Inti College Subang:<br />
+                <i id="futsal" class="sport">FUTSAL</i>,&nbsp;
+                <i class="sport">BASKETBALL</i>,&nbsp;
+                <i class="sport">BASEBALL</i>,&nbsp;
+                <i class="sport">VOLLEYBALL</i>,&nbsp;
+                <i class="sport">FOOTBALL</i>,&nbsp;
+                <i class="sport">TABLE TENNIS</i>,&nbsp;
+                <i class="sport">GOLF</i>,&nbsp;
+                <i class="sport">CRICKET</i>,&nbsp;
+                <i class="sport">MARATHON</i>,&nbsp;
+                <i>OPERA</i>,&nbsp;
+                <i>READING BOOKS</i>.
+            </p><br />
+            <div id="tables">
+                <table border="1" width="1000">
+                    <caption>INTI CLUB GROUP MEMBER INFORMATION TABLE</caption>
+                    <tr>
+                        <th id="clubYear">CLUB</th>
+                        <th>2010</th>
+                        <th>2011</th>
+                        <th>2012</th>
+                        <th>2013</th>
+                        <th>2014</th>
+                        <th>2015</th>
+                        <th>2016</th>
+                        <th>2017</th>
+                        <th>2018</th>
+                        <th>2019</th>
+                    </tr>
+                    <tr>
+                        <td>FUTSAL</td>
+                        <td id="firstPoint">23</td>
+                        <td>26</td>
+                        <td>24</td>
+                        <td>28</td>
+                        <td id="middlePoint">23</td>
+                        <td>26</td>
+                        <td>24</td>
+                        <td>28</td>
+                        <td id="untilPoint">26</td>
+                        <td>24</td>
+                    </tr>
+                    <tr>
+                        <td>BASKETBALL</td>
+                        <td>10</td>
+                        <td>12</td>
+                        <td>11</td>
+                        <td>13</td>
+                        <td>10</td>
+                        <td>12</td>
+                        <td>11</td>
+                        <td>13</td>
+                        <td>10</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>BASEBALL</td>
+                        <td>34</td>
+                        <td>39</td>
+                        <td>47</td>
+                        <td>38</td>
+                        <td>34</td>
+                        <td>39</td>
+                        <td>47</td>
+                        <td>38</td>
+                        <td>39</td>
+                        <td>44</td>
+                    </tr>
+                </table>
+                <br /><br />
+                <table border="1" width="1000">
+                    <caption>INTI CLUB GROUP MEMBER INFORMATION TABLE</caption>
+                    <tr>
+                        <th>CLUB</th>
+                        <th>2010</th>
+                        <th>2011</th>
+                        <th>2012</th>
+                        <th>2013</th>
+                        <th>2014</th>
+                        <th>2015</th>
+                        <th>2016</th>
+                        <th>2017</th>
+                        <th>2018</th>
+                        <th>2019</th>
+                    </tr>
+                    <tr>
+                        <td>TABLE TENNIS</td>
+                        <td>23</td>
+                        <td>26</td>
+                        <td>24</td>
+                        <td>28</td>
+                        <td>23</td>
+                        <td>26</td>
+                        <td>24</td>
+                        <td>28</td>
+                        <td>23</td>
+                        <td>26</td>
+                    </tr>
+                    <tr>
+                        <td>VOLLEYBALL</td>
+                        <td>10</td>
+                        <td>12</td>
+                        <td>11</td>
+                        <td>13</td>
+                        <td>10</td>
+                        <td>12</td>
+                        <td>11</td>
+                        <td>13</td>
+                        <td>10</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>BADMINTON</td>
+                        <td>34</td>
+                        <td>39</td>
+                        <td>47</td>
+                        <td>38</td>
+                        <td>34</td>
+                        <td>39</td>
+                        <td>47</td>
+                        <td>38</td>
+                        <td>34</td>
+                        <td>39</td>
+                    </tr>
+                </table>
+            </div>
+            
+        </div>
+    </div>
+<script>
+    $(document).ready(function () {
+        // parent() method returns the direct parent element of the current element.
+        $("#subjectList").parent().css({ "color": "purple", "font-weight": "bold", "font-size": "20px" });
+
+        // parents() method returns all ancestor elements of the selected element, all the way up to the document's root element.
+        $("#futsal").parents().css({ "color": "darkblue", "font-family": "Courier New", "font-weight": "bold" });
+
+        // sibilings() method returns all sibling elements of the selected element.
+        $("#clubYear").siblings().css({ "color": "black", "font-family": "Arial" });
+
+        // next() method returns the next sibiling element of the selected element.
+        $("#firstPoint").next().css({ "color": "red", "font-family": "Arial" });
+
+        // nextUntil() method returns all next sibiling elements between two given arguments.
+        $("#middlePoint").nextUntil("#untilPoint").css({ "color": "brown", "font-family": "Arial" });
+
+        // first() method returns the first element of the selected element.
+        $("tr").first().css({ "background-color": "yellow" });
+
+        // last() method returns the last element of the selected element.
+        $("tr").last().css({ "background-color": "lightgreen" });
+
+        // eq() method returns the index number equal to the index number of the selected element.
+        $("tr").eq(2).css({ "background-color": "pink" });
+
+        // not() method returns the elements which does not have the value.
+        $("i").not(".sport").css({ "background-color": "lightgray" });
+    });
+</script>
+</body>
+</html>
